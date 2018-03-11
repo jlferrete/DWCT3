@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script type="text/javascript">
+	
+	function ArrayElements(e, i, a) {
+	
+	if (e !== numRep) {
+            arrCriba[i] = e;
+        }else if(contador===0){
+            arrCriba[i]= e;
+            contador++;
+		}
+	
+	}
+	
+	function comprobarRep(arrNumeros,numRep){
+		
+	arrNumeros.forEach(ArrayElements);
+	
+	return arrCriba;
+	}
+	
+	var arrNumeros=[];
+	var arrCriba = new Array;
+	var contador = 0;
+	for(var i=0;i<10;i++){
+		arrNumeros[i]=prompt("Escriba un numero para la posicion "+(i+1));
+		}
+	var numRep=prompt("Escriba el numero para evaluar su repetición");
+	var resultado = comprobarRep(arrNumeros,numRep);
+
+	window.document.write(resultado);
+	
+	</script>
+
+
+</head>
+<body>
+	
+
+</body>
+</html>

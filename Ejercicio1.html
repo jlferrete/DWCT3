@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script type="text/javascript">
+
+			function calculos (numeros) {
+				var numMayor;
+				var numMenor;
+				var media;
+				var suma=0;
+
+				/*El método apply() invoca una determinada función asignando explícitamente el objeto this 
+				y un array o similar (array like object) como parámetros (argumentos) para dicha función.*/		
+				numMenor = Math.min.apply(Math, numeros);
+				numMayor = Math.max.apply(Math, numeros);
+				
+				/*En la practica anterior, realizabamos la suma al introducir los valores por el prompt, 
+				en esta ocasión y por los errores obtenidos, hemos preferido operar con ellos, una vez estén 
+				todos dentro de la array*/
+								
+				for (var j = numeros.length - 1; j >= 0; j--) {
+
+					suma = parseInt(suma) + parseInt(numeros[j]);
+					
+				}
+
+				media = parseInt(suma)/parseInt(numeros.length);
+
+				document.write("El mayor de los numeros introducidos es "+numMayor+"<BR/>El menor de los numeros introducidos es "+numMenor+"<BR/>La media de los numeros introducidos es "+media);
+
+				return resultado;
+			} 
+
+			var cantidad = prompt("Introduzca la cantidad de numeros que va a introducir");
+			var arrNum = [];
+			var num= "";
+			
+
+			for (var i = 0; i < cantidad; i++) {
+				
+				num = prompt("Introduzca el número a ingresar en la posición "+(i+1));
+				arrNum.push(num);
+			}
+			
+			calculos(arrNum);
+
+
+		
+
+	</script>
+
+
+</head>
+<body>
+	
+
+</body>
+</html>

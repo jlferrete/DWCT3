@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script type="text/javascript">
+	
+	function agenda(tareas,realizada,anadir){
+		var resultado;
+		var agenda = new Array;
+		/*Empleamos la funcion .reverse() para dar la vuelta al indice de los
+		elementos de la array*/
+		agenda=tareas.reverse();
+		/* shift(): Elimina el primer elemento de un array */
+		if(realizada==1){
+			agenda.shift();
+		}
+		else{}
+		if(anadir==""){
+		}
+		else{
+		//push(): Añade nuevos elementos al array y devuelve la nueva longitud.
+		agenda.push(anadir);
+		}
+		resultado = agenda.toString();
+		/* Para hacer un replace global, consultamos https://www.w3schools.com/jsref/jsref_replace.asp 
+		var res = str.replace(/blue/g, "red");
+		*/
+		resultado = resultado.replace(/,/g,"<br/>");
+		resultado="Las tareas a realizar son : <br/>"+resultado;
+		return resultado;
+	}
+	var tareas=["Trabajo Tema 3 Servidor","Trabajo Tema 3 Cliente","Test 1 Cliente","Test 2 Cliente","Test 3 Cliente","Test 1 Servidor","Test 2 Servidor","Test 3 Servidor"];
+	var realizada=1;
+	var anadir="Trabajo EIE";
+	
+	window.document.write(agenda(tareas,realizada,anadir));
+	</script>
+</head>
+<body>
+</body>
+</html>

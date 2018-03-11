@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script type="text/javascript">
+
+		var cadena=prompt("Introduzca una cadena de texto: ");
+		var arrPalabras = cadena.split(" ");
+		var arrPalabras1 = arrPalabras;
+		
+
+		function invertir(cadena) {
+
+			var cadenaInvertida="";
+  			
+  			for (var i = arrPalabras.length-1; i >= 0; i--) {
+  				
+  				cadenaInvertida = cadenaInvertida + arrPalabras[i] + " ";
+  			}
+  		return cadenaInvertida;	
+		}
+
+		alert("Número de palabras introducidas: "+arrPalabras.length);
+		alert("Primera palabra introducida: "+arrPalabras[0]);
+		alert("Última palabra introducida: "+arrPalabras[arrPalabras.length-1]);
+		alert("Las palabras colocadas en orden inverso: "+invertir(arrPalabras));
+		/*Atencion: El método sort, va a cambiar el array original, por eso hemos creado arrPalabras1.
+		El objetivo es no perder nunca la información inicial*/
+		alert("Palabras ordenadas de la a a la z: "+arrPalabras1.sort());
+		//Como se advertía antes, el array original ha cambiado, por eso, podemos hacerlo así.
+		alert("Palabras ordenadas de la z a la a: "+arrPalabras1.reverse());	
+
+	</script>
+
+
+</head>
+<body>
+	
+
+</body>
+</html>
